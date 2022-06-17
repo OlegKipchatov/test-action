@@ -1,0 +1,11 @@
+name: Notify
+
+runs:
+  using: "composite"
+  steps:
+    - name: Get Project info
+      shell: bash
+      run: |
+        echo ${{ github.repository }}
+        echo ${{ github.workflow }}
+        echo ${{ github.event_name }}
